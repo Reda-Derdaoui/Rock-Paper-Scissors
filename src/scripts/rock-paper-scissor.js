@@ -84,53 +84,62 @@ function playGame(playerMove) {
     pickMove();
 
     let result = '';
+    let result2 = '';
 
     if (playerMove === 'Rock') {
 
         if (computrMove === 'Rock') {
-            result = 'Tie.';
+            result = `Tie.`;
+            result2 = `<img class="imoji-image js-image" src="../images/smile.png">`;
         }
         else if (computrMove === 'Paper') {
-            result = 'You lose.';
+            result = `You lose.`;
+            result2 = `<img class="imoji-image js-image" src="../images/sad.png"></img>`;
         }
         else if (computrMove === 'scissors') {
-            result = 'You win.';
+            result = `You Win.`;
+            result2 = `<img class="imoji-image js-image" src="../images/happy-face.png">`
         }
     }
 
     else if (playerMove === 'Paper') {
 
         if (computrMove === 'Rock') {
-            result = 'You win.';
-
+            result = `You Win.`;
+            result2 = `<img class="imoji-image js-image" src="../images/happy-face.png">`
         } else if (computrMove === 'Paper') {
-            result = 'Tie.';
+            result = `Tie.`;
+            result2 = `<img class="imoji-image js-image" src="../images/smile.png">`;
 
         } else if (computrMove === 'scissors') {
-            result = 'You lose.';
+            result = `You lose.`;
+            result2 = `<img class="imoji-image js-image" src="../images/sad.png"></img>`;
         }
     }
 
     else if (playerMove === 'scissors') {
 
         if (computrMove === 'Rock') {
-            result = 'You lose.';
+            result = `You lose.`;
+            result2 = `<img class="imoji-image js-image" src="../images/sad.png"></img>`;
 
         } else if (computrMove === 'Paper') {
-            result = 'You win.';
+            result = `You Win.`;
+            result2 = `<img class="imoji-image js-image" src="../images/happy-face.png">`;
 
         } else if (computrMove === 'scissors') {
-            result = 'Tie.';
+            result = `Tie.`;
+            result2 = `<img class="imoji-image js-image" src="../images/smile.png">`;
         }
     }
 
-    if (result === 'You lose.') {
+    if (result === `You lose.`) {
         score.losses += 1;
 
-    } else if (result === 'You win.') {
+    } else if (result === `You Win.`) {
         score.wins += 1;
 
-    } else if (result === 'Tie.') {
+    } else if (result === `Tie.`) {
         score.ties += 1;
     }
 
@@ -139,6 +148,7 @@ function playGame(playerMove) {
     updateScore();
 
     document.querySelector('.js-result').innerHTML = result;
+    document.querySelector('.js-image').innerHTML = result2;
 
     document.querySelector('.js-move').innerHTML
         = ` You 

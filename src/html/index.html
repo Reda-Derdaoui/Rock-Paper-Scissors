@@ -11,33 +11,29 @@
 <body>
 
   <p class="title">Rock Paper Scissors</p>
+  <div>
+    <button class="moveButton js-rock-button">
+      <img class="image" src="../images/rock-emoji.png">
+    </button>
 
-  <button class="moveButton js-rock-button">
-    <img class="image" src="../images/rock-emoji.png">
-  </button>
+    <button class="moveButton js-paper-button">
+      <img class="image" src="../images/paper-emoji.png">
+    </button>
 
-  <button class="moveButton js-paper-button">
-    <img class="image" src="../images/paper-emoji.png">
-  </button>
+    <button class="moveButton js-scissors-button">
+      <img class="image" src="../images/scissors-emoji.png">
+    </button>
+  </div>
 
-  <button class="moveButton js-scissors-button">
-    <img class="image" src="../images/scissors-emoji.png">
-  </button>
+  <div class="container-res-img">
+    <p class="js-result p-result"></p>
+    <div class="js-image"></div>
+  </div>
 
-
-  <p class="js-result p-result"></p>
   <p class="js-move"></p>
-  <p class="js-score"></p>
-
+  <p class="js-score score"></p>
 
   <button class="reset-score js-reset-score">Reset score</button>
-
-  <!-- <button onclick="
-        autoPlay();
-      " class="auto-play-button">
-        Auto Play
-    </button> -->
-
 
   <script src="../scripts/rock-paper-scissor.js"></script>
 </body>
