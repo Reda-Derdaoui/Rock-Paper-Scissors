@@ -10,35 +10,20 @@ if (!score) {
 
 updateScore();
 
-/*function autoPlay() {
-    setInterval(function () {
-        let playerMove = pickMove();
-        playGame(playerMove);
-    }, 1000);
-}*/
-
-
-
-
 document.querySelector('.js-rock-button')
     .addEventListener('click', () => {
         playGame('Rock');
-    }
-    )
-
+    });
 
 document.querySelector('.js-paper-button')
     .addEventListener('click', () => {
         playGame('Paper');
-    }
-    )
-
+    });
 
 document.querySelector('.js-scissors-button')
     .addEventListener('click', () => {
         playGame('scissors');
-    }
-    )
+    });
 
 document.querySelector('.js-reset-score')
     .addEventListener('click', () => {
@@ -47,7 +32,7 @@ document.querySelector('.js-reset-score')
         score.wins = 0;
         localStorage.removeItem('score');
         updateScore();
-    })
+    });
 
 
 document.body.addEventListener('keydown', (event) => {
@@ -58,7 +43,7 @@ document.body.addEventListener('keydown', (event) => {
     } else if (event.key === 's') {
         playGame('scissors');
     }
-})
+});
 
 
 let computrMove = '';
@@ -76,7 +61,7 @@ function pickMove() {
     else if (randomNumberse >= (2 / 3) && randomNumberse < 1) {
         computrMove = 'scissors';
     }
-}
+};
 
 
 function playGame(playerMove) {
@@ -155,10 +140,10 @@ function playGame(playerMove) {
                 <img class="move-img" src="../images/${playerMove}-emoji.png">
                 <img class="move-img" src="../images/${computrMove}-emoji.png">
                 Computer `;
-}
+};
 
 function updateScore() {
     document.querySelector('.js-score')
         .innerHTML =
         ` wins : ${score.wins} , losses : ${score.losses} , Ties : ${score.ties} `;
-}
+};
