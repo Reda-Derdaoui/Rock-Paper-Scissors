@@ -10,6 +10,12 @@ if (!score) {
     }
 }
 
+const updateScore = () => {
+    document.querySelector('.js-score')
+        .innerHTML =
+        ` wins : ${score.wins} , losses : ${score.losses} , Ties : ${score.ties} `;
+};
+
 updateScore();
 
 document.querySelector('.js-rock-button')
@@ -145,8 +151,3 @@ const playGame = playerMove => {
                 Computer `;
 };
 
-function updateScore() {
-    document.querySelector('.js-score')
-        .innerHTML =
-        ` wins : ${score.wins} , losses : ${score.losses} , Ties : ${score.ties} `;
-};
