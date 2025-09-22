@@ -51,7 +51,7 @@ document.body.addEventListener('keydown', (event) => {
 
 let computrMove = '';
 
-function pickMove() {
+const pickMove = () => {
 
     let randomNumberse = Math.random();
 
@@ -67,7 +67,7 @@ function pickMove() {
 };
 
 
-function playGame(playerMove) {
+const playGame = playerMove => {
 
     pickMove();
 
