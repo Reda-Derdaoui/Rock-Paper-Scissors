@@ -1,3 +1,5 @@
+import { images } from "../scripts/images.js";
+
 let score = JSON.parse(localStorage.getItem('score'));
 
 if (!score) {
@@ -46,6 +48,7 @@ document.body.addEventListener('keydown', (event) => {
 });
 
 
+
 let computrMove = '';
 
 function pickMove() {
@@ -75,15 +78,15 @@ function playGame(playerMove) {
 
         if (computrMove === 'Rock') {
             result = `Tie.`;
-            result2 = `<img class="imoji-image js-image" src="../images/smile.png">`;
+            result2 = `${images[0]}`;
         }
         else if (computrMove === 'Paper') {
             result = `You lose.`;
-            result2 = `<img class="imoji-image js-image" src="../images/sad.png"></img>`;
+            result2 = `${images[1]}`;
         }
         else if (computrMove === 'scissors') {
             result = `You Win.`;
-            result2 = `<img class="imoji-image js-image" src="../images/happy-face.png">`
+            result2 = `${images[2]}`;
         }
     }
 
@@ -91,14 +94,14 @@ function playGame(playerMove) {
 
         if (computrMove === 'Rock') {
             result = `You Win.`;
-            result2 = `<img class="imoji-image js-image" src="../images/happy-face.png">`
+            result2 = `${images[2]}`;
         } else if (computrMove === 'Paper') {
             result = `Tie.`;
-            result2 = `<img class="imoji-image js-image" src="../images/smile.png">`;
+            result2 = `${images[0]}`;
 
         } else if (computrMove === 'scissors') {
             result = `You lose.`;
-            result2 = `<img class="imoji-image js-image" src="../images/sad.png"></img>`;
+            result2 = `${images[1]}`;
         }
     }
 
@@ -106,15 +109,15 @@ function playGame(playerMove) {
 
         if (computrMove === 'Rock') {
             result = `You lose.`;
-            result2 = `<img class="imoji-image js-image" src="../images/sad.png"></img>`;
+            result2 = `${images[1]}`;
 
         } else if (computrMove === 'Paper') {
             result = `You Win.`;
-            result2 = `<img class="imoji-image js-image" src="../images/happy-face.png">`;
+            result2 = `${images[2]}`;
 
         } else if (computrMove === 'scissors') {
             result = `Tie.`;
-            result2 = `<img class="imoji-image js-image" src="../images/smile.png">`;
+            result2 = `${images[0]}`;
         }
     }
 
